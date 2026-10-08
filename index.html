@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>AXIOM — Performance Club</title>
+    <meta name="description" content="AXIOM Performance Club. Strength coaching, performance testing and recovery for people who train with intent." />
+    <meta name="theme-color" content="#07080a" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+  </head>
+  <body class="is-loading">
+    <!-- Intro loader -->
+    <div class="loader" data-loader aria-hidden="true">
+      <div class="loader__inner">
+        <div class="loader__brand">AXIOM</div>
+        <div class="loader__bar"><span data-loader-bar></span></div>
+        <div class="loader__row"><span>Calibrating</span><span data-loader-count>000</span></div>
+      </div>
+    </div>
+
+    <!-- 3D layer -->
+    <canvas class="webgl" data-webgl aria-hidden="true"></canvas>
+    <div class="scene-shade" data-shade aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <header class="nav" data-nav>
+      <a class="nav__brand" href="#hero" aria-label="AXIOM home">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 20 12 4l9 16" stroke="currentColor" stroke-width="2" />
+          <path d="M7.5 14h9" stroke="#c6ff3d" stroke-width="2" />
+        </svg>
+        AXIOM
+      </a>
+      <nav class="nav__links" data-nav-links aria-label="Primary">
+        <a href="#power">Power</a>
+        <a href="#training">Training</a>
+        <a href="#programs">Programs</a>
+        <a href="#membership">Membership</a>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--primary btn--sm" href="#membership" data-magnetic><span>Join the club</span></a>
+      </div>
+      <button class="nav__menu" data-nav-toggle aria-expanded="false" aria-label="Open menu">
+        <i></i><i></i>
+      </button>
+      <span class="nav__progress" data-progress></span>
+    </header>
+
+    <main>
+      <!-- 01 HERO -->
+      <section class="story hero" id="hero">
+        <div class="stage">
+          <div class="stage__inner">
+            <div class="hero__content" data-hero-content>
+              <p class="label"><span class="dot"></span>AXIOM Performance Club</p>
+              <h1 class="title hero__title">
+                <span class="line"><span>Forge</span></span>
+                <span class="line"><span>your <em class="accent">limits</em></span></span>
+              </h1>
+              <p class="copy hero__sub">
+                Coached strength, performance testing and recovery under one roof. Built for people who train with intent.
+              </p>
+              <div class="hero__ctas">
+                <a class="btn btn--primary" href="#membership" data-magnetic>
+                  <span>Start training
+                    <svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg>
+                  </span>
+                </a>
+                <a class="btn btn--ghost" href="#programs" data-magnetic><span>Explore programs</span></a>
+              </div>
+            </div>
+            <div class="hero__meta" data-hero-meta>
+              <div class="scroll-cue"><i></i><span class="label">Scroll to begin</span></div>
+              <div class="spec">
+                Obj—01 / Hex dumbbell<br />
+                32 kg · Knurled steel · Rubber
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 POWER -->
+      <section class="story power" id="power">
+        <div class="stage">
+          <div class="stage__inner">
+            <div class="power__content" data-power>
+              <p class="label"><em>01</em> — Power</p>
+              <h2 class="title title--md">
+                <span class="line"><span>Strength is</span></span>
+                <span class="line"><span>a skill.</span></span>
+                <span class="line"><span class="accent">We coach it.</span></span>
+              </h2>
+              <p class="copy">
+                Every lift is programmed, tracked and corrected. Progressive overload with a coach watching every rep, not a
+                spreadsheet you forget about.
+              </p>
+              <div class="stats">
+                <div class="stat"><strong><span data-count="12">0</span></strong><span>Lifting platforms</span></div>
+                <div class="stat"><strong><span data-count="4.6" data-decimals="1">0</span>t</strong><span>Calibrated plates</span></div>
+                <div class="stat"><strong>1:<span data-count="6">0</span></strong><span>Coach ratio</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 TRAINING -->
+      <section class="story training" id="training">
+        <div class="stage">
+          <div class="stage__inner">
+            <div class="training__head" data-training-head>
+              <p class="label"><em>02</em> — Training</p>
+              <h2 class="title title--md">
+                <span class="line"><span>A floor built</span></span>
+                <span class="line"><span>for progress.</span></span>
+              </h2>
+            </div>
+            <div class="training__foot" data-training-foot>
+              <div class="chapters">
+                <article class="chapter">
+                  <span class="chapter__num">01 / 03</span>
+                  <h3>Free-weight floor</h3>
+                  <p>Twelve platforms, calibrated plates and racks spaced for real lifting, not for walking past.</p>
+                </article>
+                <article class="chapter">
+                  <span class="chapter__num">02 / 03</span>
+                  <h3>Performance lab</h3>
+                  <p>Force plates and velocity tracking that turn effort into numbers you can act on.</p>
+                </article>
+                <article class="chapter">
+                  <span class="chapter__num">03 / 03</span>
+                  <h3>Recovery suite</h3>
+                  <p>Cold plunge, sauna and soft-tissue work, scheduled with the same intent as training.</p>
+                </article>
+              </div>
+              <div class="ticks" aria-hidden="true"><span><i></i></span><span><i></i></span><span><i></i></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 MOVEMENT -->
+      <section class="story movement" id="movement">
+        <div class="stage">
+          <div class="kinetic-wrap" aria-hidden="true">
+            <div class="kinetic-track" data-kinetic>
+              <div class="kinetic">
+                <span>Push</span><span>Pull</span><span class="fill">Drive</span><span>Hinge</span><span>Carry</span><span>Sprint</span>
+              </div>
+              <div class="kinetic kinetic--echo" data-kinetic-echo>
+                <span>Push</span><span>Pull</span><span>Drive</span><span>Hinge</span><span>Carry</span><span>Sprint</span>
+              </div>
+            </div>
+          </div>
+          <div class="stage__inner">
+            <div class="movement__head" data-movement-head>
+              <p class="label"><em>03</em> — Movement</p>
+              <h2 class="title title--sm">
+                <span class="line"><span>Train how</span></span>
+                <span class="line"><span>you move.</span></span>
+              </h2>
+            </div>
+            <p class="copy movement__copy" data-movement-copy>
+              Six foundational patterns, loaded with intent. Speed, force and control built in the same session, so strength
+              shows up outside the gym.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 PROGRAMS -->
+      <section class="section programs" id="programs">
+        <div class="section__head">
+          <div data-reveal>
+            <p class="label"><em>04</em> — Programs</p>
+            <h2 class="title title--md">Four ways<br />to get stronger.</h2>
+          </div>
+          <p class="copy" data-reveal>Every program starts with an assessment and is reviewed every six weeks. Mix them as your goals change.</p>
+        </div>
+        <div class="programs__grid">
+          <article class="program-card" data-tilt>
+            <div class="program-card__top"><span>01</span><span>Strength</span></div>
+            <div class="program-card__art" aria-hidden="true">
+              <svg viewBox="0 0 240 160">
+                <path d="M30 80h180" stroke-width="3" />
+                <rect x="44" y="40" width="14" height="80" rx="2" /><rect x="62" y="52" width="10" height="56" rx="2" />
+                <rect x="182" y="40" width="14" height="80" rx="2" /><rect x="168" y="52" width="10" height="56" rx="2" />
+              </svg>
+            </div>
+            <div>
+              <h3>Strength</h3>
+              <p>Barbell-first coaching in periodised blocks, with tracked lifts and technical feedback every session.</p>
+              <div class="program-card__meta"><span>3–4× / week</span><span>60 min</span></div>
+            </div>
+          </article>
+          <article class="program-card" data-tilt>
+            <div class="program-card__top"><span>02</span><span>Engine</span></div>
+            <div class="program-card__art" aria-hidden="true">
+              <svg viewBox="0 0 240 160">
+                <path d="M10 92h48l12-34 16 66 14-52 10 20h120" stroke-width="2.5" stroke-linejoin="round" />
+                <path d="M10 124h220" stroke-dasharray="2 8" />
+              </svg>
+            </div>
+            <div>
+              <h3>Conditioning</h3>
+              <p>Engine work built on heart-rate zones. Sleds, ergs and intervals that carry over to everything else.</p>
+              <div class="program-card__meta"><span>2–3× / week</span><span>45 min</span></div>
+            </div>
+          </article>
+          <article class="program-card" data-tilt>
+            <div class="program-card__top"><span>03</span><span>Range</span></div>
+            <div class="program-card__art" aria-hidden="true">
+              <svg viewBox="0 0 240 160">
+                <path d="M50 130A70 70 0 0 1 190 130" stroke-width="2.5" />
+                <path d="M70 130A50 50 0 0 1 170 130" stroke-dasharray="3 7" />
+                <circle cx="120" cy="130" r="5" /><path d="M120 130 172 82" stroke-width="2.5" />
+              </svg>
+            </div>
+            <div>
+              <h3>Mobility</h3>
+              <p>Joint prep and end-range strength, so you can get into good positions and stay strong in them under load.</p>
+              <div class="program-card__meta"><span>2× / week</span><span>40 min</span></div>
+            </div>
+          </article>
+          <article class="program-card" data-tilt>
+            <div class="program-card__top"><span>04</span><span>Output</span></div>
+            <div class="program-card__art" aria-hidden="true">
+              <svg viewBox="0 0 240 160">
+                <path d="M30 130h180M30 130V30" />
+                <path d="M40 120c40-4 60-30 80-56s40-30 80-34" stroke-width="2.5" />
+                <circle cx="200" cy="30" r="5" />
+              </svg>
+            </div>
+            <div>
+              <h3>Performance</h3>
+              <p>Force-plate testing, velocity-based training and sport-specific programming for competitive athletes.</p>
+              <div class="program-card__meta"><span>Assessment-led</span><span>75 min</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 06 MEMBERSHIP -->
+      <section class="section membership" id="membership">
+        <div class="section__head">
+          <div data-reveal>
+            <p class="label"><em>05</em> — Membership</p>
+            <h2 class="title title--md">Choose your<br />commitment.</h2>
+          </div>
+          <div class="billing" role="group" aria-label="Billing period" data-billing data-reveal>
+            <button type="button" aria-pressed="true" data-period="monthly">Monthly</button>
+            <button type="button" aria-pressed="false" data-period="annual">Annual −17%</button>
+          </div>
+        </div>
+        <div class="plans">
+          <article class="plan" data-plan>
+            <header>
+              <h3 class="plan__name">Foundation</h3>
+              <p class="plan__desc">Train on your own with structure.</p>
+            </header>
+            <div class="plan__price"><small>$</small><strong data-price="89">89</strong><span>/ month</span></div>
+            <ul>
+              <li>Open floor access, 6am to 11pm</li>
+              <li>2 small-group classes each week</li>
+              <li>Quarterly strength assessment</li>
+              <li>Programming and tracking in the app</li>
+            </ul>
+            <a class="btn btn--ghost" href="#final" data-magnetic><span>Choose Foundation</span></a>
+          </article>
+          <article class="plan plan--featured" data-plan>
+            <span class="plan__tag">Most chosen</span>
+            <header>
+              <h3 class="plan__name">Performance</h3>
+              <p class="plan__desc">Coached training that keeps you progressing.</p>
+            </header>
+            <div class="plan__price"><small>$</small><strong data-price="159">159</strong><span>/ month</span></div>
+            <ul>
+              <li>Everything in Foundation</li>
+              <li>Unlimited classes</li>
+              <li>Monthly 1:1 coaching review</li>
+              <li>Force-plate testing every 6 weeks</li>
+              <li>Recovery suite, 2 sessions each week</li>
+            </ul>
+            <a class="btn btn--primary" href="#final" data-magnetic><span>Choose Performance</span></a>
+          </article>
+          <article class="plan" data-plan>
+            <header>
+              <h3 class="plan__name">Elite</h3>
+              <p class="plan__desc">Fully personal training, programming and recovery.</p>
+            </header>
+            <div class="plan__price"><small>$</small><strong data-price="329">329</strong><span>/ month</span></div>
+            <ul>
+              <li>Everything in Performance</li>
+              <li>8 private sessions each month</li>
+              <li>Fully individual programming</li>
+              <li>Unlimited recovery suite access</li>
+              <li>Nutrition coaching</li>
+            </ul>
+            <a class="btn btn--ghost" href="#final" data-magnetic><span>Choose Elite</span></a>
+          </article>
+        </div>
+        <p class="plans__note" data-reveal>No joining fee. Cancel with 30 days' notice. Your first session is free.</p>
+      </section>
+
+      <!-- 07 FINAL -->
+      <section class="story final" id="final">
+        <div class="stage">
+          <div class="stage__inner">
+            <div class="final__content" data-final>
+              <p class="label"><span class="dot"></span>Your first session is on us</p>
+              <h2 class="title final__title">
+                <span class="line"><span>Build what you're</span></span>
+                <span class="line"><span class="accent">capable of.</span></span>
+              </h2>
+              <div class="final__ctas">
+                <a class="btn btn--primary btn--lg" href="mailto:hello@axiom.club" data-magnetic>
+                  <span>Book a free session
+                    <svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__brand">
+        <strong>AXIOM</strong>
+        <p>Performance Club</p>
+      </div>
+      <div>
+        <span class="label">Visit</span>
+        <p>14 Foundry Lane<br />Open daily, 6am to 11pm</p>
+      </div>
+      <div>
+        <span class="label">Contact</span>
+        <p><a href="mailto:hello@axiom.club">hello@axiom.club</a><br />+1 (555) 014 2026</p>
+      </div>
+      <div>
+        <span class="label">Follow</span>
+        <p><a href="#">Instagram</a><br /><a href="#">YouTube</a></p>
+      </div>
+      <small class="footer__legal">© 2026 AXIOM Performance Club</small>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
